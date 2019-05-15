@@ -37,6 +37,7 @@ public class WebDriverManager {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-extensions");
         options.addArguments("disable-infobars");
+        options.addArguments("--start-maximized");
         return options;
     }
 

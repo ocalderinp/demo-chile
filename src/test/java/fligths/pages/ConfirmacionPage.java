@@ -26,18 +26,22 @@ public class ConfirmacionPage extends BasePage {
     }
 
     public String getNombre() {
+        highlighterElement(findElement(By.xpath(nombreXPATH)));
         return findElement(By.xpath(nombreXPATH)).getText().replace("Nombre: ", "");
     }
 
     public String getApellido() {
+        highlighterElement(findElement(By.xpath(apellidoXPATH)));
         return findElement(By.xpath(apellidoXPATH)).getText().replace("Apellido: ", "");
     }
 
     public String getTipoTarjeta() {
+        highlighterElement(findElement(By.xpath(tipoTarjetaXPATH)));
         return findElement(By.xpath(tipoTarjetaXPATH)).getText().replace("Tarjeta: ", "");
     }
 
     public String getPais() {
+        highlighterElement(findElement(By.xpath(paisXPATH)));
         return findElement(By.xpath(paisXPATH)).getText().replace("País: ", "");
     }
 }

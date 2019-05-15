@@ -19,6 +19,8 @@ public class VuelosPage extends BasePage{
     }
 
     public boolean verificarDatos(int pasajeros, String clase, String salida, String regreso) {
+        highlighterElement(findElement(pasajerosYClaseLocator));
+        highlighterElement(findElement(salidaYRegresoLocator));
         return findElement(pasajerosYClaseLocator).getText().equals(pasajeros + " Pasajero | " + clase) &&
                 findElement(salidaYRegresoLocator).getText().equals(salida + " - " + regreso);
     }

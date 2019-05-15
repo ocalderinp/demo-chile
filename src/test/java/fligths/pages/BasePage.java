@@ -2,6 +2,7 @@ package fligths.pages;
 
 import fligths.utils.GetProperties;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -48,5 +49,10 @@ public class BasePage {
     public void selectByText(WebElement select, String text){
         Select combo = new Select(select);
         combo.selectByVisibleText(text);
+    }
+
+    public void highlighterElement(WebElement element){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", element);
     }
 }
