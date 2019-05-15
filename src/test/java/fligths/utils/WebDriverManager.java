@@ -19,7 +19,7 @@ public class WebDriverManager {
     }
 
     private WebDriver createDriver() {
-        if (browser.equals("CHROME")){
+        if(browser.equals("CHROME")){
             driver = new ChromeDriver(getChromeOptions());
         } else if(browser.equals("FIREFOX")){
             driver = new FirefoxDriver();
@@ -27,7 +27,7 @@ public class WebDriverManager {
             driver = new InternetExplorerDriver();
         }
         else {
-            System.out.println("Navegdar seleccionado no soportado. Se utiliza chrome por defecto");
+            System.out.println("Navegador seleccionado no soportado. Se utiliza chrome por defecto");
             driver = new ChromeDriver(getChromeOptions());
         }
         return driver;
